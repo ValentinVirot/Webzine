@@ -1,0 +1,20 @@
+﻿@model Pays
+
+<tr>
+    <td>@Html.DisplayFor(model => model.Nom)</td>
+    <td>
+        <div class="d-flex flex-row align-items-center justify-content-center">
+            <form  method="get">
+                <button asp-route-area="Administration" asp-controller="Pays" asp-action="@(nameof(PaysController.Manage))" asp-route-fonction="Edit" asp-route-id="@Model.IdPays" class="bg-transparent border-0">
+                    <i class="fas fa-edit text-primary"></i>
+                </button>
+            </form>
+            <form  method="get">
+                <button asp-route-area="Administration" asp-controller="Pays" asp-action="@(nameof(PaysController.Delete))" asp-route-id="@Model.IdPays" class="bg-transparent border-0">
+                    <i class="fas fa-trash text-primary"></i>
+                </button>
+            </form>
+        </div>
+
+    </td>
+</tr>

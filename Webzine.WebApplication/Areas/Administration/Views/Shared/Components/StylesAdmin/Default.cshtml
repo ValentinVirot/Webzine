@@ -1,0 +1,25 @@
+﻿@model List<Webzine.WebApplication.Areas.Administration.ViewModels.StylesSideBarViewModel>
+
+    <div class="col">
+        <h1>Titres pas style</h1>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr class="header-column">
+                    <th scope="col" class="second-column">Nb de titres</th>
+                    <th scope="col" class="second-column">Style</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.TotalTitres</td>
+                        <td>@item.Style.Libelle</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
